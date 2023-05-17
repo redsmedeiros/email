@@ -39,6 +39,8 @@ public class EmailServiceImpl implements EmailService {
 
             emailSender.send(message);
 
+            emailModel.setStatusEmail(StatusEmail.SENT);
+
         }catch(MailException e){
 
             emailModel.setStatusEmail(StatusEmail.ERROR);

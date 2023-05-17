@@ -33,6 +33,6 @@ public class EmailController {
 
         Email response = emailService.sendEmail(emailModel);
 
-        return new ResponseEntity<>(response, HttpStatus.OK);
+        return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 }
